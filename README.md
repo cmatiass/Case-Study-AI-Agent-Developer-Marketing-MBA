@@ -1,15 +1,21 @@
-## 1. What is one major limitation of the "Critique & Refine" loop you built, and how might you address it in a production system?
+### 1. What is one major limitation of the "Critique & Refine" loop you built, and how might you address it in a production system?
 
 The major limitation is lack of objective quality metrics. The system relies entirely on subjective LLM evaluation without measurable standards, leading to inconsistent critiques and no guarantee that iterations actually improve content quality.
 
 In a production system, I would address this by implementing hybrid evaluation with objective metrics: combining automated quality scores (readability, engagement potential, CTA strength, hashtag effectiveness, length optimization) with LLM critique. This approach would use measurable thresholds (e.g., overall score ≥ 7.0/10) to make consistent refinement decisions, while still leveraging LLM intelligence for nuanced feedback. The system would also track historical performance data to continuously improve quality assessment and prevent the circular reasoning problem inherent in pure LLM-to-LLM evaluation.
 
-## 2. Why is managing the AgentState so critical in a cyclical graph like this one?
+### 2. Why is managing the AgentState so critical in a cyclical graph like this one?
 
 Managing the AgentState is critical in cyclical graphs because state persistence and consistency across iterations is essential for intelligent decision-making. 
 
 
 Without proper state management, each cycle would be isolated, causing the agent to lose learning from previous iterations and potentially get stuck in endless refinement loops. The centralized state acts as the "memory" that enables the cyclical graph to make informed decisions about when to continue refining versus when to exit the loop.
+
+## 🌐 Try it here!
+
+You can try the project here: [Case-Study-AI-Agent-Developer-Marketing-MBA](https://front-case-study-ai-agent-developer.onrender.com)  
+
+⚠️ **Note:** The first load may take several minutes since the app is hosted on Render free tier and needs to spin up before being accessible.
 
 ---
 
